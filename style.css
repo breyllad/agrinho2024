@@ -1,24 +1,16 @@
- :root{
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
+body {
+    
+    background: linear-gradient(to bottom, #000000, #ff69b4);
+    height: 100vh; 
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
 }
 
-body{
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
+h1 {
+    font-size: 3em; 
+    margin: 0; 
 }

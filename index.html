@@ -1,20 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradiente de Fundo</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Candal&family=Inter&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Projeto com Navbar</title>
+  <style>
+      body {
+    font-family: 'Candal', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #eaf8e0;
+    background-image: url('file:///F:/gif.gif');
+    background-size: cover; /* Ajusta o GIF para cobrir toda a tela */
+    background-repeat: no-repeat; /* Evita que o GIF se repita */
+    background-attachment: fixed; /* Faz com que o GIF não role com o conteúdo da página */
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+    }
+    .header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .navbar {
+      display: flex;
+      background-color: #2e8b57;
+      overflow: hidden;
+    }
+    .navbar a {
+      flex: 1;
+      padding: 14px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      transition: transform 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+      transform: scale(1.1);
+    }
+    .content {
+      padding: 20px;
+    }
+    .topic-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .topic-content div {
+      flex: 1;
+      margin-right: 20px;
+    }
+    .topic-content img {
+      max-width: 900px; /* Ajuste a largura máxima conforme necessário */
+      height: 600px; /* Defina uma altura fixa para garantir a mesma proporção */
+      object-fit: cover; /* Garante que a imagem mantenha a proporção */
+      margin-left: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    .active {
+      display: flex;
+    }
+    h2 {
+      color: #2e8b57;
+    }
+    p {
+      color: #333;
+    }
+    p strong {
+      color: #2e8b57;
+    }
+  </style>
 </head>
-<body>
-    <div class="content">
-        <h1>Agrinho 2024</h1>
-        <p>
-            Mudar do campo para a cidade é trocar a tranquilidade rural pela agitação urbana. Enquanto o campo oferece paz e contato com a natureza, a cidade traz ritmo acelerado e novas oportunidades. Adaptar-se envolve equilibrar o estresse urbano com as tradições do campo.
-        </p>
+<body onload="setInitialBackground()">
+
+  <div class="header">
+    PROJETO AGRINHO
+  </div>
+
+  <div class="navbar">
+    <a href="#" onclick="showContent('topico1')">AGRICULTURA</a>
+    <a href="#" onclick="showContent('topico2')">SUSTENTABILIDADE</a>
+    <a href="#" onclick="showContent('topico3')">TECNOLOGIA</a>
+    <a href="#" onclick="showContent('topico4')">MERCADO</a>
+  </div>
+
+  <div class="content">
+    <div id="topico1" class="hidden topic-content">
+      <div>
+        <h2>Agricultura Urbana e Hidroponia</h2>
+        <p>A agricultura urbana e hidroponia são práticas agrícolas que permitem o cultivo de plantas em ambientes urbanos, muitas vezes em espaços limitados como telhados, varandas e terrenos abandonados. A hidroponia, especificamente, é um método de cultivo sem solo, onde as raízes das plantas recebem uma solução nutritiva balanceada diretamente. Essa técnica é altamente eficiente no uso de água e nutrientes, tornando-se uma opção sustentável para áreas com recursos limitados.</p>
+        <p><strong>Benefícios:</strong></p>
+        <ul>
+          <li>Redução da Pegada de Carbono: A produção local de alimentos reduz a necessidade de transporte, diminuindo as emissões de gases de efeito estufa.</li>
+          <li>Fornecimento de Produtos Frescos e Locais: Os consumidores têm acesso a alimentos mais frescos e nutritivos, cultivados perto de onde vivem.</li>
+          <li>Criação de Empregos: A agricultura urbana pode gerar empregos em áreas urbanas, promovendo o desenvolvimento econômico local.</li>
+          <li>Educação Ambiental: Projetos de agricultura urbana podem servir como ferramentas educativas, aumentando a conscientização sobre práticas sustentáveis e a importância da produção local de alimentos.</li>
+        </ul>
+      </div>
+      <img src="file:///F:/IMAGEM_1.png" alt="Imagem Agricultura Urbana e Hidroponia">
     </div>
+    <div id="topico2" class="hidden topic-content">
+      <div>
+        <h2>Hortas Comunitárias e Sustentabilidade</h2>
+        <p>As hortas comunitárias são espaços compartilhados em bairros urbanos onde os moradores podem cultivar seus próprios alimentos. Essas hortas promovem a sustentabilidade, a educação alimentar e a integração social, criando um senso de comunidade e empoderamento entre os participantes.</p>
+        <p><strong>Benefícios:</strong></p>
+        <ul>
+          <li>Consumo de Alimentos Frescos e Orgânicos: Incentiva o consumo de produtos frescos e livres de agrotóxicos, melhorando a saúde e bem-estar dos moradores.</li>
+          <li>Fortalecimento da Comunidade: As hortas comunitárias promovem a colaboração e o engajamento social, fortalecendo os laços entre os moradores.</li>
+          <li>Redução do Desperdício de Alimentos: A produção local de alimentos ajuda a diminuir o desperdício, pois os alimentos são colhidos e consumidos conforme a demanda.</li>
+          <li>Aproveitamento de Espaços Urbanos Ociosos: Transformar terrenos vazios em hortas produtivas melhora a estética urbana e a utilização do espaço.</li>
+        </ul>
+      </div>
+      <img src="file:///F:/IMAGEM_2.jpg" alt="Imagem Hortas Comunitárias e Sustentabilidade">
+    </div>
+    <div id="topico3" class="hidden topic-content">
+      <div>
+        <h2>Tecnologias Agrotech e Smart Farming</h2>
+        <p>As tecnologias agrotech e smart farming aplicam inovações tecnológicas avançadas para otimizar a produção agrícola. Utilizando sensores IoT, drones, e sistemas de gestão agrícola, essas tecnologias permitem monitoramento em tempo real, gestão eficiente de recursos e aumento da produtividade.</p>
+        <p><strong>Benefícios:</strong></p>
+        <ul>
+          <li>Eficiência no Uso da Água e Nutrientes: Tecnologias de precisão garantem que os recursos sejam utilizados de forma otimizada, reduzindo o desperdício.</li>
+          <li>Aumento da Produtividade: Monitoramento constante e intervenções precisas melhoram a saúde das plantas e a produção de alimentos.</li>
+          <li>Monitoramento em Tempo Real: Sensores e drones fornecem dados em tempo real sobre as condições das plantas, solo e clima, permitindo ações imediatas.</li>
+          <li>Redução dos Custos Operacionais: A automação e o uso eficiente de recursos diminuem os custos de produção, tornando a agricultura mais rentável.</li>
+        </ul>
+      </div>
+      <img src="file:///F:/IMAGEM_3.jpeg" alt="Imagem Tecnologias Agrotech e Smart Farming">
+    </div>
+    <div id="topico4" class="hidden topic-content">
+      <div>
+        <h2>Mercados de Agricultores e Circuitos Curtos de Comercialização</h2>
+        <p>Os mercados de agricultores e circuitos curtos de comercialização promovem a venda direta de produtos entre produtores locais e consumidores. Esses mercados oferecem uma alternativa ao modelo tradicional de distribuição de alimentos, fortalecendo a economia local e garantindo acesso a produtos frescos.</p>
+        <p><strong>Benefícios:</strong></p>
+        <ul>
+          <li>Fortalecimento da Economia Local: A venda direta dos produtos beneficia a economia local ao manter o dinheiro circulando na comunidade.</li>
+          <li>Acesso a Produtos Frescos e de Qualidade: Os consumidores têm acesso a alimentos frescos e de alta qualidade, diretamente dos produtores.</li>
+          <li>Preços Mais Justos: A eliminação de intermediários resulta em preços mais justos para produtores e consumidores.</li>
+          <li>Incentivo à Produção Sustentável e Orgânica: A demanda por produtos frescos e locais incentiva práticas agrícolas sustentáveis e orgânicas, beneficiando o meio ambiente.</li>
+        </ul>
+      </div>
+      <img src="file:///F:/IMAGEM_4.jpg" alt="Imagem Mercados de Agricultores e Circuitos Curtos de Comercialização">
+    </div>
+  </div>
+
+  <script>
+    function setInitialBackground() {
+      document.body.style.backgroundImage = "url('file:///F:/gif.gif')";
+    }
+
+    function showContent(topicId) {
+      // Oculta todos os tópicos
+      const topics = document.querySelectorAll('.topic-content');
+      topics.forEach(topic => {
+        topic.classList.add('hidden');
+      });
+
+      // Exibe o tópico selecionado
+      const selectedTopic = document.getElementById(topicId);
+      if (selectedTopic) {
+        selectedTopic.classList.remove('hidden');
+      }
+
+      // Altera o plano de fundo para uma cor sólida
+      document.body.style.backgroundImage = 'none';
+      document.body.style.backgroundColor = '#eaf8e0'; // Cor sólida do plano de fundo
+    }
+  </script>
+
 </body>
 </html>
-
 
 
